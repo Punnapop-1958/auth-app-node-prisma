@@ -5,7 +5,6 @@ import morgan from "morgan";
 import authRoute from "./routes/auth.route.js";
 
 const app = express();
-const PORT = 5000;
 
 app.use(cors()); //Allow cross domain
 app.use(morgan("dev")); //Show logs
@@ -19,6 +18,6 @@ app.use((err, req, res, next) => {
   res.status(err.code || 500).json({ message: err.message || "Server Error" });
 });
 
-app.listen(PORT, () =>
-  console.log(`Server is running on http://localhost:${PORT}`)
+app.listen(process.env.PORT, () =>
+  console.log(`Server is running on http://localhost:${process.env.PORT}`)
 );
