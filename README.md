@@ -2,13 +2,13 @@
 
 ### 🔐 Registration (POST `/api/auth/register`)
 
-json
+```json
 {
   "email": "test@gmail.com",
   "username": "test12345",
   "password": "12345678"
 }
-
+```
 ### 🛠 Tech Stack
 
 - **Backend:** Node.js, Express.js
